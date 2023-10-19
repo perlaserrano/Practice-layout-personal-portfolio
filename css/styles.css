@@ -1,0 +1,319 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    /* background: #ccc; */
+    margin: auto;
+    overflow: hidden;
+}
+
+/*Header*/
+
+header {
+    background: url('../img/trabajos/ciudad.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    position: relative; /* Para poder posicionar ::before */
+}
+
+/* Capa de difuminado */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 163, 214, 0.7); /* Color de fondo difuminado con opacidad */
+    
+}
+
+header .menu {
+    margin: 40px 0;
+    position: relative;
+    text-align: right; 
+}
+
+header .menu a{
+    margin: 0 20px;
+    color: #fff;
+    padding-bottom: 9px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+}
+
+header .menu a:hover{
+    border-bottom: 2px solid #fff;
+
+}
+
+header .contenedor-texto {
+    position: relative; 
+    z-index: 1; 
+    text-align: center;
+    /* display: flex; */
+    margin: 190px 0;
+   
+}
+
+header .contenedor-texto .texto{
+    border: 2px solid rgb(255, 255, 255,0.5);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 60px;
+}
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2{
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+
+}
+
+header .contenedor-texto .texto .nombre{
+    margin: 10px;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+header .contenedor-texto .texto .profesion{
+    font-size: 25px;
+    line-height: 25px;
+}
+
+/*main*/
+.main .contenedor {
+    overflow: visible;
+}
+
+.main .acerca-de {
+    text-align: center;
+    position: relative;
+}
+
+.main .acerca-de .foto {
+    position: absolute;
+    top: -60px;  /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Alinea al centro exacto */
+    z-index: 2;
+    margin: 0 auto; /* Centra horizontalmente en caso de que sea necesario */
+}
+
+.main .acerca-de .foto img{
+    vertical-align: top;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255,0.2);
+}
+
+.main .acerca-de .texto{
+    color: #5a5a5a;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 30px;
+    width: 80%;
+    margin: 40px auto 60px auto;
+
+}
+.main .acerca-de .texto .titulo{
+    font-size: 34px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #dd820d;
+    text-align: center;
+    line-height: 34px;
+}
+
+.main .acerca-de .texto .bold{
+    color: #3895ea;
+    text-decoration: underline;
+}
+
+.main .trabajos{
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+
+.main .trabajos .contenedor{
+    overflow: hidden;
+}
+
+.main .trabajos .titulo{
+    font-size: 34px;
+    margin-bottom: 40px;
+    margin-top: 0rem;
+    font-weight: 600;
+    color: #323068;
+    text-align: center;
+    line-height: 34px;
+}
+
+.main .trabajos .contenedor-trabajos{
+    /* width: 23%; */
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo{
+    width: 28%;
+    margin-bottom: 40px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb img {
+    width: 100%; 
+    height: 325px; 
+    vertical-align: top;
+    border-radius: 3px;
+}
+.main .trabajos .contenedor-trabajos .trabajo .descripcion{
+    text-align: center;
+
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre{
+    font-weight: 700;
+    color: #3895ea;
+    margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria{
+    font-size: 14px;
+    color: #636363;
+}
+
+footer .contacto{
+    padding: 60px 0;
+}
+
+footer .contacto .titulo{
+    font-size: 34px;
+    margin-bottom: 40px;
+    margin-top: 0rem;
+    font-weight: 600;
+    color: #3895ea;
+    text-align: center;
+    line-height: 34px;
+}
+
+footer .contacto .formulario{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus {
+    border: 2px solid #a4a4a4;
+
+}
+
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"]{
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+footer .contacto .formulario textarea{
+    width: 100%;
+    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height:100px ;
+    max-height: 300px;
+    margin-bottom: 15px;
+    
+}
+
+footer .contacto .formulario .boton{
+    margin: auto;
+    background: #3895ea;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+footer .contacto .formulario .boton:hover{
+    background: #387bea;
+}
+
+footer .redes-sociales{
+    background: #1e2b35;
+    padding: 60px 0;
+}
+
+footer .redes-sociales .contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a{
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 30px;
+    background: #ccc;
+    margin: 0 20px;
+}
+
+footer .redes-sociales .facebook:hover{background-color: #1877f2;}
+footer .redes-sociales .github:hover{background-color: #333;}
+footer .redes-sociales .instagram:hover{background-color: #f56040;}
+
+@media screen and (max-width:800px){
+    header .menu{
+        text-align: center;
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo{
+        width: 46%;
+    }
+}
+
+@media screen and (max-width:500px){
+    header .contenedor-texto .texto .nombre{
+        font-size: 35px;
+    }
+
+    footer .redes-sociales .contenedor{
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+}
